@@ -1,6 +1,6 @@
 {
   "name": "@zander-br/ef-tools",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Entity Framework interaction tool",
   "main": "lib/index.js",
   "files": [
