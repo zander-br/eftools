@@ -1,0 +1,60 @@
+{
+  "name": "@zander-br/ef-tools",
+  "version": "0.0.4",
+  "description": "Entity Framework interaction tool",
+  "main": "lib/index.js",
+  "files": [
+    "lib/**/*"
+  ],
+  "author": "Anderson Santos",
+  "license": "ISC",
+  "scripts": {
+    "build": "tsc",
+    "prepare": "npm run build",
+    "version": "git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zander-br/eftools"
+  },
+  "bugs": {
+    "url": "https://github.com/zander-br/eftools/issues"
+  },
+  "homepage": "https://github.com/zander-br/eftools#readme",
+  "bin": {
+    "ef-tools": "./lib/index.js"
+  },
+  "keywords": [
+    "Entity Framework",
+    "CLI"
+  ],
+  "dependencies": {
+    "chalk": "4.1.2",
+    "date-fns": "2.27.0",
+    "figlet": "1.5.2",
+    "inquirer": "8.2.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "15.0.0",
+    "@commitlint/config-conventional": "15.0.0",
+    "@types/figlet": "^1.5.4",
+    "@types/inquirer": "^8.1.3",
+    "@types/node": "^16.11.11",
+    "@typescript-eslint/eslint-plugin": "5.4.0",
+    "@typescript-eslint/parser": "5.4.0",
+    "eslint": "8.3.0",
+    "eslint-config-airbnb-base": "15.0.0",
+    "eslint-config-prettier": "7.2.0",
+    "eslint-import-resolver-typescript": "2.5.0",
+    "eslint-plugin-import": "2.25.3",
+    "eslint-plugin-prettier": "4.0.0",
+    "git-commit-msg-linter": "3.2.8",
+    "husky": "7.0.4",
+    "lint-staged": "12.1.2",
+    "prettier": "2.5.0",
+    "pretty-quick": "3.1.2",
+    "rimraf": "3.0.2",
+    "typescript": "4.5.2"
+  }
+}
