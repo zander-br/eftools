@@ -10,6 +10,7 @@
   "license": "ISC",
   "scripts": {
     "build": "tsc",
+    "test": "jest --passWithNoTests --runInBand",
     "prepare": "npm run build",
     "version": "git add -A src",
     "postversion": "git push && git push --tags"
