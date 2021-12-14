@@ -6,6 +6,7 @@ import { createPromptModule } from 'inquirer';
 
 import { generate as generateScript } from './actions/generateScript';
 import { generate as generateMigration } from './actions/generateMigration';
+import { update as updateDatabase } from './actions/updateDatabase';
 
 console.clear();
 
@@ -33,6 +34,10 @@ const run = async () => {
 
       case 'Generate a new migration':
         generateMigration(currentDirectory);
+        break;
+
+      case 'Update database':
+        updateDatabase(currentDirectory);
         break;
 
       default:
