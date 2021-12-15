@@ -49,7 +49,7 @@ export async function generate(currentDirectory: string) {
   );
   const previousMigration = migrationsForContext[migrationIndex + 1];
 
-  const filename = `${format(new Date(), 'yyyyMMddHHmmss')}-${migration}.sql`;
+  const filename = `${format(new Date(), 'yyyyMMddHHmmss')}_${migration}.sql`;
   const command = `dotnet ef migrations script ${previousMigration} --project ${location} --context ${context}Context -o ./${filename}`;
   exec(command, () => {
     console.log(chalk.green('\nScript criado com sucesso 👏\n\n'));
