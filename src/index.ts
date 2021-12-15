@@ -20,7 +20,11 @@ const run = async () => {
         name: 'action',
         type: 'list',
         message: 'What do you want to do?',
-        choices: ['Generate migration script', 'Generate a new migration'],
+        choices: [
+          'Generate migration script',
+          'Generate a new migration',
+          'Update database',
+        ],
       },
     ];
 
