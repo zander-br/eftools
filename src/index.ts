@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /* eslint-disable no-console */
-import * as chalk from 'chalk';
+import chalk from 'chalk';
 import { textSync } from 'figlet';
 import { createPromptModule } from 'inquirer';
 
@@ -8,6 +8,7 @@ import { generate as generateScript } from './actions/generateScript';
 import { generate as generateMigration } from './actions/generateMigration';
 import { update as updateDatabase } from './actions/updateDatabase';
 import { remove as removeMigration } from './actions/removeMigration';
+import { generate as generateScaffold } from './actions/generateScaffold';
 
 console.clear();
 
@@ -26,6 +27,7 @@ const run = async () => {
           'Generate a new migration',
           'Update database',
           'Remove last migration',
+          'Generate Scaffold',
         ],
       },
     ];
@@ -48,6 +50,10 @@ const run = async () => {
 
       case 'Remove last migration':
         removeMigration(currentDirectory);
+        break;
+
+      case 'Generate Scaffold':
+        generateScaffold(currentDirectory);
         break;
 
       default:

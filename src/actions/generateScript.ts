@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-import * as chalk from 'chalk';
+import chalk from 'chalk';
 import { basename } from 'path';
 import { createPromptModule } from 'inquirer';
 import { format } from 'date-fns';
